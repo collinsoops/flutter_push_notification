@@ -27,11 +27,13 @@ class LocalNotificationService {
           android: AndroidNotificationDetails(
             "notification",
             "notification channel",
-            importance: Importance.max,
+            importance: Importance.high,
             priority: Priority.high,
+            playSound: true,
+            timeoutAfter: 50000,
+
           )
       );
-
 
       await _notificationsPlugin.show(
         id,
